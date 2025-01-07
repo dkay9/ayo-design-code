@@ -7,7 +7,7 @@ hamburger.addEventListener("click", hideLinks); // When hamburger is clicked, th
 hamburger.addEventListener("click", changeMenuState); // When hamburger is clicked, it changes into menu or x
 
 // When one of the links is clicked, the links disappear
-let link = document.querySelectorAll("div#links > ul > *");
+let link = document.querySelectorAll("header#links > div > *");
 for (let i = 0; i < link.length; i++) {
 	let allLinks = link[i];
 	allLinks.addEventListener("click", hideLinks);

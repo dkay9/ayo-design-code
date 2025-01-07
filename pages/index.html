@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <!-- Hero Section -->
-    <main class="h-screen bg-white px-4">
-        <div>
-            <img class="w-12 p-2 md:hidden lg:hidden mt-6" src="/img/d1-logo.png" alt="Logo">
+    <main class="h-screen bg-white ">
+        <div class="flex justify-between items-center mt-4 px-4">
+            <div>
+                <img class="w-12 p-2 mt-0 md:hidden lg:hidden lg:mt-6" src="/img/d1-logo.png" alt="Logo">
+            </div>
+            <!-- Hamburger -->
+            <button class="md:hidden flex cursor-pointer flex-col justify-center gap-y-1" id="hamburger" aria-label="menu">
+                <div class="w-6 h-1 bar bg-green-600 rounded-lg duration-500"></div>
+                <div class="w-6 h-1 bar bg-green-600 rounded-lg duration-500"></div>
+                <div class="w-6 h-1 bar bg-green-600 rounded-lg duration-500"></div>
+            </button>
         </div>
-        <header class="w-3/5 md:w-10/12 rounded hidden md:flex bg-white shadow-md mx-auto mt-4 p-2">
-            <nav class="hidden md:flex lg:flex justify-between px-3 items-center w-full">
+        <header class="w-full hidden min-h-[100vh] lg:min-h-fit absolute lg:relative lg:w-3/5 md:w-10/12 rounded  md:flex bg-white shadow-md mx-auto mt-4 p-2" id="links">
+            <nav class=" md:flex lg:flex justify-between px-3 items-center w-full">
                 <div>
-                    <img class="w-12 p-2" src="/img/d1-logo.png" alt="Logo">
+                    <img class="hidden w-12 p-2 md:flex" src="/img/d1-logo.png" alt="Logo">
                 </div>
-                <div id="links">
+                <div>
                     <ul class="text-black flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-4">
                         <li class="px-2 py-2 md:px-1 hover:bg-green-300 hover:text-white rounded transition duration-300 ease-in-out">
                             <a href="#">Home</a>
@@ -40,15 +48,8 @@
                 </div>
                 <div>
                     <a href="#">
-                        <button class="bg-green-600 hover:bg-green-300 rounded-lg text-white py-2 px-2 transition duration-300 ease-in-out">Join the waitlist</button>
+                        <button class="bg-green-600 mt-6 lg:mt-0 hover:bg-green-300 rounded-lg text-white py-2 px-2 transition duration-300 ease-in-out">Join the waitlist</button>
                     </a>
-
-                    <!-- Hamburger -->
-                    <button class="md:hidden flex cursor-pointer flex-col justify-center gap-y-1" id="hamburger" aria-label="menu">
-                        <div class="w-6 h-1 bar bg-black rounded-lg duration-500"></div>
-                        <div class="w-6 h-1 bar bg-black rounded-lg duration-500"></div>
-                        <div class="w-6 h-1 bar bg-black rounded-lg duration-500"></div>
-                    </button>
                 </div>
             </nav>
         </header>
@@ -71,7 +72,12 @@
 
         <div class="text-center flex justify-center items-center">
             <img class="w-full lg:w-1/2 " src="/img/d1-hero.jpg" alt="Hero">
+            <a href="" class="relative">
+                <button class="bg-green-600 hover:bg-green-300 transition duration-300 ease-in-out py-2 px-2 rounded-lg absolute bottom-0 text-black">click me</button>
+            </a>
         </div>
     </main>
+
+    <script src="./js/navbar.js"></script>
 </body>
 </html>
